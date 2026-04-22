@@ -1,3 +1,9 @@
+__pycache__/
+*.pyc
+.cursor/
+outputs/*.mp3
+uploads/*.mp4
+<<<<<<< HEAD
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -205,3 +211,8 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+=======
+__pycache__/
+*.pyc
+.cursor/
+>>>>>>> 29773d4 (Initial commit: add FastAPI MP4 to MP3 converter app)

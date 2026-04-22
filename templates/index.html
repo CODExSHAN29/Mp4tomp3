@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free MP4 to MP3 Converter Online</title>
+    <meta
+      name="description"
+      content="Convert MP4 videos to high-quality MP3 audio instantly. Fast, free, and secure."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="min-h-screen bg-slate-950 text-slate-100 antialiased">
+    <div class="relative overflow-hidden">
+      <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.16),transparent_45%),radial-gradient(circle_at_bottom,_rgba(139,92,246,0.18),transparent_45%)]"></div>
+
+      <main class="relative mx-auto max-w-6xl px-4 pb-16 pt-14 sm:px-6 lg:px-8">
+        <section class="mx-auto max-w-3xl text-center">
+          <p class="inline-flex rounded-full border border-cyan-300/30 bg-cyan-400/10 px-3 py-1 text-xs font-semibold tracking-wide text-cyan-200">
+            MP4 TO MP3 ONLINE
+          </p>
+          <h1 class="mt-5 text-4xl font-extrabold tracking-tight text-white sm:text-6xl">
+            Convert MP4 to MP3 instantly
+          </h1>
+          <p class="mx-auto mt-4 max-w-2xl text-sm text-slate-300 sm:text-lg">
+            Fast, free, and secure MP4 to MP3 conversion online with auto-deleted files for privacy.
+          </p>
+        </section>
+
+        <section class="mx-auto mt-10 w-full max-w-2xl rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-transparent p-8 shadow-2xl backdrop-blur-xl">
+          <form id="convert-form" action="/convert" method="post" enctype="multipart/form-data" class="space-y-5">
+            <label
+              for="file-input"
+              class="group block cursor-pointer rounded-xl border border-slate-700/80 bg-slate-900/60 p-4 transition-all duration-300 hover:border-cyan-400/80 hover:bg-slate-900"
+            >
+              <span class="block text-sm font-semibold text-slate-200">Choose MP4 file</span>
+              <span class="mt-1 block text-xs text-slate-400">Click to browse from your device</span>
+              <input
+                id="file-input"
+                type="file"
+                name="file"
+                accept=".mp4,video/mp4"
+                required
+                class="mt-3 block w-full cursor-pointer rounded-lg border border-slate-600/70 bg-slate-800/80 px-3 py-2 text-sm text-slate-100 file:mr-3 file:cursor-pointer file:rounded-md file:border-0 file:bg-cyan-500/20 file:px-3 file:py-2 file:text-sm file:font-medium file:text-cyan-200 hover:border-cyan-400/70 focus:outline-none focus:ring-2 focus:ring-cyan-400/60"
+              />
+            </label>
+
+            <button
+              id="submit-btn"
+              type="submit"
+              class="w-full rounded-xl bg-gradient-to-r from-cyan-500 via-blue-500 to-violet-500 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-cyan-500/25 transition duration-300 hover:scale-[1.02] hover:from-cyan-400 hover:to-violet-400 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:scale-100"
+            >
+              Convert to MP3
+            </button>
+          </form>
+
+          <p id="status-converting" class="mt-4 text-sm font-medium text-cyan-300" hidden>
+            Converting...
+          </p>
+
+          <section id="status-success" class="mt-4 rounded-xl border border-emerald-400/40 bg-emerald-500/10 p-4" hidden>
+            <p class="text-sm font-semibold text-emerald-300">Your MP3 is ready.</p>
+            <p class="mt-1 text-xs text-emerald-200/90">Download your converted audio file below.</p>
+            <div class="mt-3 flex flex-wrap gap-3">
+              <a
+                id="download-link"
+                href="#"
+                class="inline-flex items-center rounded-lg bg-emerald-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-400"
+              >
+                Download MP3
+              </a>
+              <button
+                id="convert-another-btn"
+                type="button"
+                class="inline-flex items-center rounded-lg border border-slate-500 px-4 py-2 text-sm font-medium text-slate-200 transition hover:border-slate-300 hover:text-white"
+              >
+                Convert Another
+              </button>
+            </div>
+          </section>
+
+          <section id="status-error" class="mt-4 rounded-xl border border-rose-400/40 bg-rose-500/10 p-4" hidden>
+            <p class="text-sm font-semibold text-rose-300">Conversion failed</p>
+            <p id="error-message" class="mt-1 text-xs text-rose-200/90">Please try again.</p>
+          </section>
+        </section>
+
+        <section class="mx-auto mt-16 max-w-5xl">
+          <h2 class="text-center text-2xl font-bold text-white sm:text-3xl">Why creators use this</h2>
+          <div class="mt-7 grid gap-4 sm:grid-cols-3">
+            <article class="rounded-xl border border-white/10 bg-slate-900/50 p-5">
+              <h3 class="text-base font-semibold text-white">High quality audio</h3>
+              <p class="mt-2 text-sm text-slate-300">Convert MP4 videos to high-quality MP3 audio with clear sound output.</p>
+            </article>
+            <article class="rounded-xl border border-white/10 bg-slate-900/50 p-5">
+              <h3 class="text-base font-semibold text-white">Fast conversion</h3>
+              <p class="mt-2 text-sm text-slate-300">Our free MP4 to MP3 converter online is optimized for quick processing.</p>
+            </article>
+            <article class="rounded-xl border border-white/10 bg-slate-900/50 p-5">
+              <h3 class="text-base font-semibold text-white">Secure by default</h3>
+              <p class="mt-2 text-sm text-slate-300">Source files are automatically deleted after processing.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="mx-auto mt-16 max-w-5xl">
+          <h2 class="text-center text-2xl font-bold text-white sm:text-3xl">How it works</h2>
+          <div class="mt-7 grid gap-4 sm:grid-cols-3">
+            <article class="rounded-xl border border-white/10 bg-slate-900/50 p-5">
+              <p class="text-xs font-semibold uppercase tracking-wider text-cyan-300">Step 1</p>
+              <h3 class="mt-2 text-base font-semibold text-white">Upload MP4</h3>
+              <p class="mt-2 text-sm text-slate-300">Select your video file and start conversion with one click.</p>
+            </article>
+            <article class="rounded-xl border border-white/10 bg-slate-900/50 p-5">
+              <p class="text-xs font-semibold uppercase tracking-wider text-cyan-300">Step 2</p>
+              <h3 class="mt-2 text-base font-semibold text-white">Convert instantly</h3>
+              <p class="mt-2 text-sm text-slate-300">Our engine extracts and converts the audio to MP3 format.</p>
+            </article>
+            <article class="rounded-xl border border-white/10 bg-slate-900/50 p-5">
+              <p class="text-xs font-semibold uppercase tracking-wider text-cyan-300">Step 3</p>
+              <h3 class="mt-2 text-base font-semibold text-white">Download MP3</h3>
+              <p class="mt-2 text-sm text-slate-300">Get your converted file immediately when processing finishes.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="mx-auto mt-16 max-w-3xl rounded-2xl border border-white/10 bg-slate-900/50 p-6 text-center">
+          <h2 class="text-2xl font-bold text-white">Share this tool</h2>
+          <p class="mt-2 text-sm text-slate-300">Help others discover this free MP4 to MP3 converter.</p>
+          <div class="mt-5 flex flex-wrap items-center justify-center gap-3">
+            <button
+              id="share-btn"
+              type="button"
+              class="inline-flex items-center rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 text-sm font-semibold text-white transition hover:from-cyan-400 hover:to-blue-400"
+            >
+              Share this tool
+            </button>
+            <a
+              id="twitter-share"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center rounded-lg border border-slate-500 px-4 py-2 text-sm font-medium text-slate-200 transition hover:border-slate-300 hover:text-white"
+            >
+              Twitter
+            </a>
+            <a
+              id="whatsapp-share"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center rounded-lg border border-slate-500 px-4 py-2 text-sm font-medium text-slate-200 transition hover:border-slate-300 hover:text-white"
+            >
+              WhatsApp
+            </a>
+          </div>
+          <p id="share-status" class="mt-3 text-sm font-medium text-emerald-300" hidden>Link copied!</p>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      const form = document.getElementById("convert-form");
+      const fileInput = document.getElementById("file-input");
+      const submitBtn = document.getElementById("submit-btn");
+      const convertingStatus = document.getElementById("status-converting");
+      const successPanel = document.getElementById("status-success");
+      const errorPanel = document.getElementById("status-error");
+      const errorMessage = document.getElementById("error-message");
+      const downloadLink = document.getElementById("download-link");
+      const convertAnotherBtn = document.getElementById("convert-another-btn");
+      const shareBtn = document.getElementById("share-btn");
+      const shareStatus = document.getElementById("share-status");
+      const twitterShare = document.getElementById("twitter-share");
+      const whatsappShare = document.getElementById("whatsapp-share");
+      const defaultButtonText = "Convert to MP3";
+      let shareStatusTimer;
+
+      function buildShareLinks() {
+        const currentUrl = window.location.href;
+        const message = "Try this free MP4 to MP3 converter";
+        twitterShare.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(message)}&url=${encodeURIComponent(currentUrl)}`;
+        whatsappShare.href = `https://wa.me/?text=${encodeURIComponent(`${message} ${currentUrl}`)}`;
+      }
+
+      async function copyCurrentUrl() {
+        const currentUrl = window.location.href;
+        await navigator.clipboard.writeText(currentUrl);
+      }
+
+      shareBtn.addEventListener("click", async () => {
+        try {
+          await copyCurrentUrl();
+          shareStatus.hidden = false;
+          clearTimeout(shareStatusTimer);
+          shareStatusTimer = setTimeout(() => {
+            shareStatus.hidden = true;
+          }, 2200);
+        } catch (error) {
+          shareStatus.textContent = "Could not copy link.";
+          shareStatus.hidden = false;
+          clearTimeout(shareStatusTimer);
+          shareStatusTimer = setTimeout(() => {
+            shareStatus.hidden = true;
+            shareStatus.textContent = "Link copied!";
+          }, 2200);
+        }
+      });
+
+      function setState(state, message = "") {
+        convertingStatus.hidden = state !== "converting";
+        successPanel.hidden = state !== "success";
+        errorPanel.hidden = state !== "error";
+
+        if (state === "error") {
+          errorMessage.textContent = message || "Something went wrong. Please try again.";
+        }
+      }
+
+      function setBusy(isBusy) {
+        submitBtn.disabled = isBusy;
+        fileInput.disabled = false;
+        submitBtn.textContent = isBusy ? "Converting..." : defaultButtonText;
+      }
+
+      function resetToIdle() {
+        setState("idle");
+        form.reset();
+        setBusy(false);
+      }
+
+      convertAnotherBtn.addEventListener("click", resetToIdle);
+      buildShareLinks();
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(form);
+        setState("converting");
+        setBusy(true);
+
+        try {
+          const response = await fetch("/convert", {
+            method: "POST",
+            body: formData,
+          });
+
+          const data = await response.json();
+          if (!response.ok || !data.success) {
+            setState("error", data.error || "Conversion failed.");
+            return;
+          }
+
+          downloadLink.href = data.download_url;
+          downloadLink.setAttribute("download", data.filename || "converted.mp3");
+          setState("success");
+          form.reset();
+        } catch (error) {
+          setState("error", "Network error. Please try again.");
+        } finally {
+          setBusy(false);
+        }
+      });
+    </script>
+  </body>
+</html>
